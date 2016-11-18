@@ -2,8 +2,8 @@
 #include <Windows.h>
 #pragma once
 //Return the lower of two Values.
-template<typename min>
-min Min(min a, min b)
+template<typename T>
+T Min(T a, T b)
 {
 	if (a < b)
 	{
@@ -15,8 +15,8 @@ min Min(min a, min b)
 	}
 }
 //Return the higher of two Values.
-template<typename max>
-max Max(max a, max b)
+template<typename T>
+T Max(T a, T b)
 {
 	if (a < b)
 	{
@@ -27,9 +27,10 @@ max Max(max a, max b)
 		return a;
 	}
 }
+
 //Constrains a value within the range of two values.
-template<typename Clamp>
-Clamp clamp(Clamp min, Clamp max, Clamp val)
+template<typename T>
+T clamp(T min, T max, T val)
 {
 	if (val > min && val < max)
 	{
@@ -40,25 +41,27 @@ Clamp clamp(Clamp min, Clamp max, Clamp val)
 	{
 		return max;
 	}
-	if (val < min);
+	if (val < min)
 	{
 		return min;
 	}
 }
-//Checks if a and b represent alphabetical characters if so, function will return value that is aphatbet lower.
-template<typename minalpha>
-minalpha stank(minalpha min, minalpha max, minalpha val)
+
+char Min(char a, char b)
 {
-	if (a < b)
-	{
-		return a;
-	}
-	if (b > a)
-	{
-		return b;
-	}
+
 }
 
 //Exercise 2:
 
 //Creates an array on the heap specified capacity.
+
+template<typename T>
+T atr(T val)
+{
+	if (val >= 0)
+	return 3;
+
+
+
+}
